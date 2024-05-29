@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int fun(int num)
+{
+    int high=0;
+    while(num>0)
+    {
+        int lar=num%10;
+        if(high<lar)
+        {
+            high=lar;
+        }
+        num=num/10;
+        
+    }
+    return high;
+}
+
+
+int main()
+{   
+    int num,result;
+    scanf("%d",&num);
+    result=fun(num);
+    printf("%d",result);
+    return 0;
+}
+
