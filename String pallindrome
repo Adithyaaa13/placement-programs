@@ -1,0 +1,31 @@
+#include<stdio.h>
+#define MAX 100
+#include<string.h>
+int function(char * str)
+{
+   
+     int low = 0;
+    int high = strlen(str) - 1;
+
+    while (low < high) {
+        if (str[low] != str[high]) {
+            return 0;
+        }
+        low++; 
+        high--; 
+    }
+    return 1; 
+}
+
+
+void main()
+{   
+    char text[MAX];
+    fgets(text, sizeof(text), stdin);
+    
+    int out=function(text);
+    printf("%d",out);
+}
+
+
+
