@@ -1,0 +1,36 @@
+#include<stdio.h>
+#define MAX 100
+
+int function(int year)
+{
+      int j,a,b;
+    a=b=1;
+    for(int i=3;i<=year;i++)
+    {
+        if(i%2==1)
+        {
+            a=a*2;
+    
+         
+            
+        }
+        else if(i%2==0)
+        {
+            b=b*3;
+       
+        }
+    }
+    if(year%2==0)
+    return b;
+    else
+    return a;
+}
+
+
+void main()
+{   
+    int y;
+    scanf("%d",&y);
+    int out=function(y);
+    printf("%d",out);
+}
