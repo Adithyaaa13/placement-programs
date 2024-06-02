@@ -1,0 +1,35 @@
+#include<stdio.h>
+#define MAX 100
+
+int function(int num)
+{
+    int r,flag,result=0;
+    int onum=num;
+   while(onum>0)
+   {
+       r=onum%10;
+       result=result+r*r*r;
+       onum=onum/10;
+       
+   if(result==num)
+   {
+       flag=1;
+   }
+   else
+   {
+       flag=0;
+   }
+   }
+   return flag;
+}
+
+
+void main()
+{   
+    int num;
+    scanf("%d",&num);
+    int out=function(num);
+    printf("%d",out);
+}
+
+
